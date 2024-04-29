@@ -1,6 +1,8 @@
 {
   "name": "status",
+  "version": "0.0.0",
   "dependencies": {
+    "@fontsource-variable/fira-code": "5.0.18",
     "@remix-run/node": "2.9.1",
     "@remix-run/react": "2.9.1",
     "@remix-run/serve": "2.9.1",
@@ -13,16 +15,20 @@
     "@remix-run/dev": "2.9.1",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
+    "autoprefixer": "10.4.19",
+    "postcss": "8.4.38",
+    "tailwindcss": "3.4.3",
     "typescript": "5.4.5",
     "vite": "5.2.10",
     "vite-tsconfig-paths": "4.3.2"
   },
   "private": true,
   "scripts": {
+    "anal": "biome check --apply .",
     "build": "remix vite:build",
     "dev": "remix vite:dev",
-    "format": "biome format --write .",
-    "lint": "biome lint --apply .",
+    "fmt": "biome format --write .",
+    "lint": "biome lint --apply-unsafe .",
     "start": "remix-serve ./build/server/index.js"
   },
   "type": "module"
