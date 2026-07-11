@@ -51,11 +51,13 @@
     <hr>
     <h2 id="myroom">myroom</h2>
     <h3 id="myroom-6h">6h</h3>
-    <img src="myroom_6h.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="6h" class="live">
+    <img src="plot_myroom_6h.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (6h)" class="live">
     <h3 id="myroom-1d">1d</h3>
-    <img src="myroom_1d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="1d" class="live">
+    <img src="plot_myroom_1d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (1d)" class="live">
     <h3 id="myroom-3d">3d</h3>
-    <img src="myroom_3d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="3d" class="live">
+    <img src="plot_myroom_3d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (3d)" class="live">
+    <h2 id="mass">mass</h2>
+    <img src="plot_mass.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="mass" class="hourly">
     <hr>
     <footer>
       <small>&copy; 2024-<?php echo date('Y') ?> YamaD</small>
@@ -63,10 +65,16 @@
   </main>
   <script>
     setInterval(() => {
-      const ts = Date.now()
+      const ts = Date.now();
       document.querySelectorAll('img.live').forEach(e => {
-        e.src = e.src.replace(/\?\d+$/, '?' + ts)
-      })
-    }, 60_000)
+        e.src = e.src.replace(/\?\d+$/, '?' + ts);
+      });
+    }, 60_000);
+    setInterval(() => {
+      const ts = Date.now();
+      document.querySelectorAll('img.hourly').forEach(e => {
+        e.src = e.src.replace(/\?\d+$/, '?' + ts);
+      });
+    }, 3600_000);
   </script>
 </body>

@@ -38,6 +38,6 @@ plot_range() {
 
 base="$(dirname $0)"
 now="$(date +%s)"
-plot_range $((now - 3600 * 6))      "$now" "$base"/pub/myroom_6h.png
-plot_range $((now - 3600 * 24))     "$now" "$base"/pub/myroom_1d.png
-plot_range $((now - 3600 * 24 * 3)) "$now" "$base"/pub/myroom_3d.png
+plot_range $((now - 3600 * 6))      "$now" "$base"/pub/plot_myroom_6h.png
+plot_range $((now - 3600 * 24))     "$now" "$base"/pub/plot_myroom_1d.png
+plot_range $((now - 3600 * 24 * 3)) "$now" "$base"/pub/plot_myroom_3d.png
