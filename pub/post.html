@@ -100,6 +100,45 @@
       <button>送信</button>
     </form>
     <hr>
+    <h2>VTR</h2>
+    <form
+      @submit="
+        post('https://db.dyama.net/vtr', {
+          ts: Number(new Date(ts).getTime().toString().slice(0,-3)),
+          fuel: Number(fuel),
+          trip: Number(trip),
+          milage: Number(milage),
+        }).then(e => {
+          alert(e.status);
+          if (e.ok) fuel = trip = milage = ''
+        });
+        $event.preventDefault();
+      "
+      x-data="{ ts: '', fuel: '', trip: '', milage: '' }"
+    >
+      <label>
+        <strong>時刻</strong>
+        <input type="datetime-local" name="ts" required x-model.fill="ts"
+          x-init="$el.value ||= (new Date(Date.now()+3600_000*9)).toISOString().slice(0,-8)">
+      </label>
+      <label>
+        <strong>給油量</strong>
+        <input type="number" name="fuel" step="any" required x-model.fill="fuel">
+        L
+      </label>
+      <label>
+        <strong>トリップ</strong>
+        <input type="number" name="trip" step="any" x-model.fill="trip">
+        km
+      </label>
+      <label>
+        <strong>走行距離</strong>
+        <input type="number" name="milage" step="any" x-model.fill="milage">
+        km
+      </label>
+      <button>送信</button>
+    </form>
+    <hr>
     <footer>
       <small>&copy; 2026 YamaD</small>
     </footer>

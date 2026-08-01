@@ -49,15 +49,20 @@
       </nav>
     </header>
     <hr>
-    <h2 id="myroom">myroom</h2>
-    <h3 id="myroom-6h">6h</h3>
-    <img src="plot_myroom_6h.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (6h)" class="live">
-    <h3 id="myroom-1d">1d</h3>
-    <img src="plot_myroom_1d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (1d)" class="live">
-    <h3 id="myroom-3d">3d</h3>
-    <img src="plot_myroom_3d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="myroom (3d)" class="live">
-    <h2 id="mass">mass</h2>
-    <img src="plot_mass.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="mass" class="hourly">
+    <h2 id="myroom">室温</h2>
+    <h3 id="myroom-6h">6時間</h3>
+    <img src="plot_myroom_6h.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="室温 (6時間)" class="live">
+    <h3 id="myroom-1d">1日</h3>
+    <img src="plot_myroom_1d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="室温 (1日)" class="live">
+    <h3 id="myroom-3d">3日</h3>
+    <img src="plot_myroom_3d.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="室温 (3日)" class="live">
+    <hr>
+    <h2 id="milage">燃費</h2>
+    <h3 id="milage-vtr">VTR</h3>
+    <img src="plot_vtr.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="燃費 (VTR)" class="hourly">
+    <hr>
+    <h2 id="mass">体重</h2>
+    <img src="plot_mass.png?<?php echo $_SERVER['REQUEST_TIME'] ?>" alt="体重" class="hourly">
     <hr>
     <footer>
       <small>&copy; 2024-<?php echo date('Y') ?> YamaD</small>
