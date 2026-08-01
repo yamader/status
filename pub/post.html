@@ -70,7 +70,7 @@
     <h2>体重</h2>
     <form
       @submit="
-        post('https://db.dyama.net/mass', {
+        post('https://example.net/mass', {
           ts: Number(new Date(ts).getTime().toString().slice(0,-3)),
           mass: Number(mass),
           fat: Number(fat),
@@ -103,7 +103,7 @@
     <h2>VTR</h2>
     <form
       @submit="
-        post('https://db.dyama.net/vtr', {
+        post('https://example.net/vtr', {
           ts: Number(new Date(ts).getTime().toString().slice(0,-3)),
           fuel: Number(fuel),
           trip: Number(trip),
