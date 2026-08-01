@@ -20,10 +20,10 @@ gnuplot <<-EOF
 	set xtics rotate by 45 right font ',10'
 	set format x '%m/%d'
 
-	set ylabel 'mass'
+	set ylabel 'mass [kg]'
 	set ytics nomirror
 
-	set y2label 'fat' rotate by -90
+	set y2label 'fat [%]' rotate by -90
 	set y2tics
 
 	offset = 3600 * 9

@@ -20,14 +20,14 @@ gnuplot <<-EOF
 	set xtics rotate by 45 right font ',10'
 	set format x '%m/%d'
 
-	set ylabel 'kmpl'
+	set ylabel 'mileage [km/L]'
 	set ytics nomirror
 
-	set y2label 'total' rotate by -90
+	set y2label 'total [km]' rotate by -90
 	set y2tics
 
 	offset = 3600 * 9
-	plot '$tsv' using (\$1 + offset):2 axis x1y1 with lines title 'kmpl', \
+	plot '$tsv' using (\$1 + offset):2 axis x1y1 with lines title 'mileage', \
 	     ''     using (\$1 + offset):3 axis x1y2 with lines title 'total'
 EOF
 

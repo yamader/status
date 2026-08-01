@@ -22,10 +22,10 @@ plot_range() {
 		set xtics rotate by 45 right font ',10'
 		set format x '%m/%d %H:%M'
 
-		set ylabel 'temp'
+		set ylabel 'temp [℃]'
 		set ytics nomirror
 
-		set y2label 'hum' rotate by -90
+		set y2label 'hum [%]' rotate by -90
 		set y2tics
 
 		offset = 3600 * 9
